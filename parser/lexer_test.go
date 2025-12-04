@@ -18,7 +18,7 @@ func TestSQLScanner_NextToken(t *testing.T) {
 	}
 
 	equalComplexObjects := func(a, b Token) bool {
-		return a.GetString() == b.GetString()
+		return a.GetText() == b.GetText()
 	}
 
 	for _, tt := range tests {
@@ -38,7 +38,7 @@ type TestToken struct {
 	str string
 }
 
-func (t *TestToken) GetString() string {
+func (t *TestToken) GetText() string {
 	return t.str
 }
 
